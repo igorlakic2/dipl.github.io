@@ -43,6 +43,7 @@ nav ul li a{
     height: 600px;
     display: none;
     margin: auto;
+    width: 100%;
 }
 .dots{
     text-align: center;
