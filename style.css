@@ -43,6 +43,7 @@ nav ul li a{
 .slide{
     height: 600px;
     display: none;
+    margin: auto;
 }
 .dots{
     text-align: center;
