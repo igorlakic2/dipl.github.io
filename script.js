@@ -8,14 +8,14 @@ function slider(){
         slide[i].style.display = "none";
     }
     for(let i=0; i<dot.length; i++){
-        dot[i].className = dot[i].className.replace(" active", "");
+        dot[i].className = dot[i].className.replace(" activeDot", "");
     }
 
     br++;
 
     if(br > slide.length){ br = 1;}
     slide[br-1].style.display = "block";
-    dot[br-1].classList.add("active");
+    dot[br-1].classList.add("activeDot");
 
     setTimeout(slider, 2000);
 }
@@ -57,8 +57,25 @@ window.onscroll = function(){
             animateValue("s3", 0, 100, 4000);
             counter++;
         }
-        
+    }
+}
+
+
+let tabs = document.querySelectorAll(".tabs");
+let content = document.querySelectorAll(".tabCon");
+
+
+function services(x, y) {
+    for(let i=0; i<tabs.length; i++){
+        tabs[i].className = tabs[i].className.replace(" activeTab", "");
+    }
+    for(let i=0; i<content.length; i++){
+        content[i].style.display = "none";
     }
 
-    
+    document.getElementById(y).style.display = "block";
+    x.currentTarget.className += " activeTab";
+
 }
+
+document.getElementById("clicked").click();

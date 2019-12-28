@@ -19,8 +19,8 @@
                 <ul>
                     <li><a href="#home">POČETNA</a></li>
                     <li><a href="#about">O NAMA</a></li>
-                    <li><a href="">USLUGE</a></li>
-                    <li><a href="">KONTAKT</a></li>
+                    <li><a href="#services">USLUGE</a></li>
+                    <li><a href="#contact">KONTAKT</a></li>
                 </ul>
             </nav>
         </div>
@@ -82,6 +82,80 @@
         </div>
 
     </div>
+
+    <div id="services">
+        <div class="tab">
+            <button id="clicked" class="tabs left" onclick="services(event, 'res')">Rezervacije</button>
+            <button class="tabs right" onclick="services(event, 'ord')">Porudžbine</button>
+        </div>
+
+        <div id="res" class="tabCon">
+            <h1>Rezervacije:</h1><br><br><br>
+            <form action="" method="post">
+                <input type="text" name="fName" placeholder="Ime"><br>
+                <input type="text" name="lName" placeholder="Prezime"><br>
+                <input type="tel" name="tel" placeholder="Broj telefona"><br>
+                <input type="email" name="email" placeholder="Mejl"><br>
+                <input type="date" name="date"><br><br>
+                <button type="submit">Rezervаcija</button>
+            </form>
+        </div>
+
+        <div id="ord" class="tabCon">
+            <h1>Porudžbine:</h1><br><br><br>
+            <form action="" method="post">
+                <span>Pica:</span> 
+                <select name="pizza" class="pizza">
+                    <option value="capricciosa">Capricciosa</option>
+                    <option value="margarita">Margarita</option>
+                    <option value="vegetariana">Vegetariana</option>
+                    <option value="vesuvio">Vesuvio</option>
+                </select><br>
+
+
+                <span>Veličina:</span>
+                
+                <!--<input type="radio" value="24" name="velicina" class="velicina" data-cena="50"> 24cm
+			    <input type="radio" value="32" name="velicina" class="velicina" data-cena="210"> 32cm
+                <input type="radio" value="50" name="velicina" class="velicina" data-cena="500"> 50cm <br><br>
+                -->
+
+                <select name="pizza" class="pizza">
+                    <option value="24" name="velicina" class="velicina" data-cena="50">24cm</option>
+                    <option value="32" name="velicina" class="velicina" data-cena="210">32cm</option>
+                    <option value="50" name="velicina" class="velicina" data-cena="500">50cm</option>
+                </select><br>
+                
+                <span>Dodaci:</span>
+                <input type="checkbox" class="dodaci" value="Kečap" data-dodatak="30">Kečap (30din)
+            	<input type="checkbox" class="dodaci" value="Majonez" data-dodatak="25">Majonez (25din)
+                   <input type="checkbox" class="dodaci" value="Sir" data-dodatak="50">Sir (50din) <br><br>
+                   
+                <span>Napomena:</span>
+			    <textarea id="napomena" name="napomena" style="height:70px; width: 300px;"></textarea><br><br><br><br>
+
+                <span>Vaš račun: <span id="racun">0</span> din</span>
+				<br><br>
+			    <input type="submit" value="Pošalji" id="btn">
+            </form>
+        </div>
+    </div>
+
+    <div id="contact">
+
+        <h1>Poruka</h1>
+        <form action="mail.php" method="post" class="formContact">
+            <input type="text" name="name" placeholder="Ime" pattern="[A-Za-z]{0,5}" title="Koristite samo slova, najviše 5 karaktera"><br>
+            <input type="email" name="email" placeholder="Mejl"><br>
+            <textarea name="message" cols="30" rows="10" placeholder="Poruka"></textarea><br>
+            <button type="submit">Pošalji</button>
+        </form>
+
+    </div>
+
+    <footer id="footer">
+		<h4>Copyright © 2019. Igor Lakić</h4>
+	</footer>
 
     <script src="script.js"></script>
 </body>
