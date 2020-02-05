@@ -304,12 +304,14 @@ footer{
     }
     #res form input, #ord form select, 
     #ord form textarea, #ord form button,
-    #contact form > *, #res form button,
-    #formAsd div {
+    #contact form > *, #res form button{
         width: 75%;
     }
+    #ord form div{
+        margin: 0;
+    }
 }
-@media (max-width: 500px){
+@media (max-width: 525px){
     nav ul li{
         display: block;
         margin: 10px 0;
