@@ -1,6 +1,7 @@
 *{
     margin: 0;
     background-color: #f3f4f3;
+    box-sizing: border-box;
 }
 header{
     width: 100%;
@@ -132,7 +133,8 @@ hr{
     margin: 5px;
 }
 
-.formContact input[type="text"], .formContact input[type="email"], .formContact textarea{
+.formContact input[type="text"], .formContact input[type="email"], 
+.formContact textarea{
     padding: 12px 5px 10px 5px;
     margin-top: 10px;
     width: 400px;
@@ -140,7 +142,30 @@ hr{
     border: 1px solid #0b56a4;
     border-radius: 7px;
 }
-.formContact button{
+#ord form textarea{
+    padding: 12px 5px 10px 5px;
+    margin: 10px 0 0 20px;
+    width: 400px;
+    height: 120px;
+    background-color: white;
+    border: 1px solid #0b56a4;
+    border-radius: 7px;
+}
+#ord form select{
+    padding: 12px 5px 10px 5px;
+    margin-top: 10px;
+    width: 400px;
+    background-color: white;
+    border: 1px solid #0b56a4;
+    border-radius: 7px;
+}
+#ord form div{
+    margin: 15px 0 0 0;
+}
+select option{
+    background-color: white;
+}
+.formContact button, #res form button, #ord form button{
     border: none;
     outline: none;
     background-color: #0b56a4; 
@@ -194,7 +219,7 @@ hr{
     padding: 20px 0;
 }
 .dodaci{
-    margin-left: 15px;
+    margin: 10px;
 }
 .activeTab{
     background-color: #ccc;
@@ -206,4 +231,43 @@ footer{
     font-size: 20px;
     text-align: center;
     border-top: 2px solid #0b56a4;
+}
+#res form input{
+    /*padding: 5px 8px 5px 8px;
+    margin: 4px;*/
+
+    padding: 12px 5px 10px 5px;
+    margin-top: 10px;
+    width: 400px;
+    background-color: white;
+    border: 1px solid #0b56a4;
+    border-radius: 7px;
+}
+
+@media (max-width: 750px){
+    header div{
+        flex-direction: column;
+        width: 100%;
+    }
+    nav{
+        text-align: center;
+        margin-top: 30px;
+    }
+    nav ul{
+        padding: 0;
+        
+    }
+    .logo{
+        text-align: center;
+    }
+    .about1 div{
+        display: block;
+    }
+    .about2 div{
+        width: 100%;
+    }
+    .slide{
+        height: 100%;
+    }
+
 }
