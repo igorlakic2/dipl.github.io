@@ -42,7 +42,7 @@ nav ul li a{
     padding-top: 30px;
 }
 .slide{
-    height: 600px;
+    height: 100%;
     display: none;
     margin: auto;
     width: 100%;
@@ -74,7 +74,7 @@ nav ul li a{
     width: 65%;
     margin: auto;
     background-color: white;
-    padding: 20px;
+    padding: 10px 0 0 0;
     text-align: center;
 }
 .about1{
@@ -160,18 +160,29 @@ hr{
     border-radius: 7px;
 }
 #ord form div{
-    margin: 15px 0 0 0;
+    margin: 15px 5px;
+    display: inline-block;
 }
 select option{
     background-color: white;
 }
-.formContact button, #res form button, #ord form button{
+.formContact button, #res form button{
     border: none;
     outline: none;
     background-color: #0b56a4; 
     color: white;
-    width: 410px;
+    width: 400px;
     border-radius: 7px;
+    padding: 10px;
+}
+#ord form button{
+    border: none;
+    outline: none;
+    background-color: #0b56a4; 
+    color: white;
+    width: 400px;
+    border-radius: 7px;
+    margin: 10px 0 0 20px;
     padding: 10px;
 }
 #services{
@@ -243,7 +254,29 @@ footer{
     border: 1px solid #0b56a4;
     border-radius: 7px;
 }
+@media (max-width: 1000px){
+    header div{
+        flex-direction: column;
+    }
+    .logo{
+        text-align: center;
+    }
+    nav{
+        margin-top: 20px;
+        text-align: center;
+    }
+    .about2{
+        padding: 20px 0;
+    }
+    .about2 div{
+        width: 40%;
+        padding: 0;
+    }
+    .about2 div div{
+        padding: 0;
+    }
 
+}
 @media (max-width: 750px){
     header div{
         flex-direction: column;
@@ -269,5 +302,24 @@ footer{
     .slide{
         height: 100%;
     }
+    #res form input, #ord form select, 
+    #ord form textarea, #ord form button,
+    #contact form > *, #res form button,
+    #formAsd div {
+        width: 75%;
+    }
+}
+@media (max-width: 500px){
+    nav ul li{
+        display: block;
+        margin: 10px 0;
+    }
+    #formAsd div div{
+        width: 100%;
+        text-align: center;
+    }
+    #ord form div{
+        margin: 0;
 
+    }
 }

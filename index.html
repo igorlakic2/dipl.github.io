@@ -92,7 +92,7 @@
 
         <div id="res" class="tabCon">
             <h1>Rezervacije:</h1><br><br><br>
-            <form action="" method="post">
+            <form action="reservation.php" method="post">
                 <input type="text" name="fName" placeholder="Ime"><br>
                 <input type="text" name="lName" placeholder="Prezime"><br>
                 <input type="tel" name="tel" placeholder="Broj telefona"><br>
@@ -103,7 +103,7 @@
         </div>
 
         <div id="ord" class="tabCon">
-            <h1>Porudžbine:</h1><br><br><br>
+            <h1>Porudžbine:</h1><br>
             <form action="" method="post" id="formAsd">
                 <select name="pizza" class="pizza">
                     <option value="none" selected disabled hidden>Pizza</option>
@@ -128,10 +128,10 @@
                 </select><br>
                 
                 <div>
-                    <input type="checkbox" class="dodaci" value="Kečap" data-dodatak="30">Kečap (30din)
-            	    <input type="checkbox" class="dodaci" value="Majonez" data-dodatak="25">Majonez (25din) 
-                    <input type="checkbox" class="dodaci" value="Sir" data-dodatak="50">Sir (50din) <br><br>    
-                </div>
+                    <div><input type="checkbox" class="dodaci" value="Kečap" data-dodatak="30">Kečap (30din)</div>
+            	    <div><input type="checkbox" class="dodaci" value="Majonez" data-dodatak="25">Majonez (25din) </div>
+                    <div><input type="checkbox" class="dodaci" value="Sir" data-dodatak="50">Sir (50din)   </div> 
+                </div> <br>
 
                
 			    <textarea id="napomena" name="napomena" placeholder="Napomena"></textarea><br><br><br>
