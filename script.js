@@ -46,8 +46,6 @@ function animateValue(id, start, end, duration) {
 let about1 = document.querySelector(".about1");
 let about2 = document.querySelector(".about2");
 let home = document.querySelector("#home");
-let x = document.getElementsByClassName("a2div");
-let t = document.querySelectorAll(".ttt");
 let counter = 0;
 
 let toTop = document.querySelector("#toTop");
@@ -71,14 +69,11 @@ window.onscroll = function(){
     }
 
     if(fromTop > a2){
-        for(let i=0; i<t.length; i++){
-            t[i].style.opacity = '1';           
-        }
+        about2.style.opacity = '1';
+        about2.style.marginTop = '0';
     }
 
     if((fromTop-window.innerHeight) > home.offsetTop){
-        //toTop.style.opacity = '1';
-        //toTop.style.display = "block";
         toTop.style.right = '15px';
     }else{
         toTop.style.right = '-50px';

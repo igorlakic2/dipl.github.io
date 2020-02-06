@@ -91,19 +91,19 @@
         </div>
 
         <div id="res" class="tabCon">
-            <h1>Rezervacije:</h1><br><br><br>
+            <h1>Rezervacije</h1><br><br><br>
             <form action="reservation.php" method="post">
-                <input type="text" name="fName" placeholder="Ime*"><br>
-                <input type="text" name="lName" placeholder="Prezime*"><br>
-                <input type="tel" name="tel" placeholder="Broj telefona*"><br>
+                <input type="text" name="fName" required placeholder="Ime*" pattern="[A-Za-z]{0,7}" title="Koristite samo slova, najviše 7 karaktera"><br>
+                <input type="text" name="lName" required placeholder="Prezime*" pattern="[A-Za-z]{0,10}" title="Koristite samo slova, najviše 10 karaktera"><br>
+                <input type="tel" name="tel" required placeholder="Broj telefona*"><br>
                 <input type="email" name="email" placeholder="Mejl"><br>
-                <input type="date" name="date"><br><br>
+                <input type="date" name="date" required><br><br>
                 <button type="submit">Rezervаcija</button>
             </form>
         </div>
 
         <div id="ord" class="tabCon">
-            <h1>Porudžbine:</h1><br>
+            <h1>Porudžbine</h1><br>
             <form action="" method="post" id="formAsd">
                 <select name="pizza" class="pizza">
                     <option value="none" selected disabled hidden>Pizza</option>
@@ -145,18 +145,26 @@
 
     <div id="contact">
 
-        <h1>Poruka</h1>
+        <h1>Kontakt</h1>
         <form action="mail.php" method="post" class="formContact">
-            <input type="text" name="name" placeholder="Ime" pattern="[A-Za-z]{0,5}" title="Koristite samo slova, najviše 5 karaktera"><br>
-            <input type="email" name="email" placeholder="Mejl"><br>
-            <textarea name="message" cols="30" rows="10" placeholder="Poruka"></textarea><br>
+            <input type="text" name="name" required placeholder="Ime" pattern="[A-Za-z]{0,5}" title="Koristite samo slova, najviše 5 karaktera"><br>
+            <input type="email" name="email" required placeholder="Mejl"><br>
+            <textarea name="message" cols="30" rows="10" required placeholder="Poruka"></textarea><br>
             <button type="submit">Pošalji</button>
         </form>
 
     </div>
 
     <footer id="footer">
-		<h4>Copyright © 2019. Igor Lakić</h4>
+        <nav>
+            <ul>
+                <li><a href="">POČETNA</a></li>
+                <li><a href="#about">O NAMA</a></li>
+                <li><a href="#services">USLUGE</a></li>
+                <li><a href="#contact">KONTAKT</a></li>
+            </ul>
+        </nav>
+		<h5>Copyright © 2019. Igor Lakić</h5>
 	</footer>
 
     <div id="toTop">

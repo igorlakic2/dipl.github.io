@@ -101,15 +101,14 @@ nav ul li a{
 .about2{
     text-align: center;
     background-color: white;
-    position: relative;
+    opacity: 0;
+    transition: opacity 3s;
 }
 .about2 div{
     width: 20%;
     padding: 20px;
     display: inline-block;
     background-color: white;
-    opacity: 0;
-    transition: opacity 3s;
 }
 i{
     font-size: 110px;
@@ -136,7 +135,6 @@ hr{
 #contact form > *{
     margin: 5px;
 }
-
 .formContact input[type="text"], .formContact input[type="email"], 
 .formContact textarea{
     padding: 12px 5px 10px 5px;
@@ -242,10 +240,17 @@ select option{
 footer{
     background-color: #f3f4f3;
     color: black;
-    padding: 35px;
+    padding: 35px 0;
     font-size: 20px;
     text-align: center;
     border-top: 2px solid #0b56a4;
+}
+footer nav{
+    margin: 15px 0 30px 0;
+}
+#res, #ord, #contact{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    //font-family: 'Courier New', Courier, monospace;
 }
 #res form input{
     /*padding: 5px 8px 5px 8px;
@@ -272,6 +277,13 @@ footer{
     border: 3px solid #0b56a4;
     background-color: white;
     text-align: center;
+}
+#toTop i:hover{
+    background-color: #0b56a4;
+    color: white;
+}
+#toTop:hover{
+    background-color: #0b56a4;
 }
 #toTop i{
     font-size: 30px;
