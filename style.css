@@ -2,6 +2,7 @@
     margin: 0;
     background-color: #f3f4f3;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 header{
     width: 100%;
@@ -100,12 +101,15 @@ nav ul li a{
 .about2{
     text-align: center;
     background-color: white;
+    position: relative;
 }
 .about2 div{
     width: 20%;
     padding: 20px;
     display: inline-block;
     background-color: white;
+    opacity: 0;
+    transition: opacity 3s;
 }
 i{
     font-size: 110px;
@@ -254,6 +258,27 @@ footer{
     border: 1px solid #0b56a4;
     border-radius: 7px;
 }
+#toTop{
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    overflow: hidden;
+    right: -50px;
+    bottom: 15px;
+    transition: right 1s;
+    position: fixed;
+    border-radius: 30%;
+    cursor: pointer;
+    border: 3px solid #0b56a4;
+    background-color: white;
+    text-align: center;
+}
+#toTop i{
+    font-size: 30px;
+    border-radius: 30%;
+    padding: 5px;
+}
+
 @media (max-width: 1000px){
     header div{
         flex-direction: column;
